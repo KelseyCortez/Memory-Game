@@ -12,28 +12,28 @@ function App() {
         <h3>Match Cards To Win</h3>
       </header>
       <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
       </div>
       <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
       </div>
       <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
       </div>
       <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
+        <MemoryCard/>
       </div>
     </div>
   );
