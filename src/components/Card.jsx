@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import './Card.css';
 
-class Card extends Component {
+class MemoryCard extends Component {
     render() {
         return (
-            <div className="Card">
-                { this.props.name }
-                <br></br>
-                { this.props.likes >= 0 ? (
-                    <sup>likes: { this.props.likes }</sup>
-                ) : '' }
+            <div className="MemoryCard">
+                <img src="https://www.digitalcrafts.com/img/logo-wrench-white.png"></img>
             </div>
+
         )
     }
 }
 
-    export default Card;
+export default MemoryCard;
