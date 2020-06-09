@@ -31,14 +31,6 @@
 }
 
 .MemoryCard_back {
-    /* display: inline-block;
-    width: 150px;
-    height: 80px;
-    margin: 3px; */
-    /* border-radius: 5px;
-    border-style: solid;
-    border-color: #193D49; */
-    /* cursor: pointer; */
     background: repeating-radial-gradient(
         circle, 
         #ccc,
