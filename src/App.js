@@ -35,9 +35,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       deck: generateDeck(),
-      pickedCard: [],
-
-    };
+      pickedCards: [],
+    }
+    
   }
   pickCard = (cardIndex) => {
     if(this.state.deck[cardIndex].isFlipped === true) {
@@ -54,6 +54,15 @@ class App extends React.Component {
     }
     return card;
   })
+  if(newPickedCards.length === 2) {
+    let card1Index = newPickedCards[0];
+    let card2Index = newPickedCards[1];
+    if(newDeck[card1Index].symbol !== newDeck[card2Index].symbol) {
+      console.log (`${newDeck[card1Index].symbol} : ${newDeck[card2Index].symbol}`);
+      //cards don't match, unflip cards
+    }
+    newPickedCards = [];
+  }
   this.setState({deck:newDeck, pickedCards:newPickedCards})
 
   }
@@ -64,6 +73,7 @@ class App extends React.Component {
       symbol={card.symbol}
       isFlipped={card.isFlipped}
       key={index}
+      pickCard={this.pickCard.bind(this, index)}
       />
     });
 
