@@ -14,9 +14,7 @@ function generateDeck() {
 
     });
   }
-  shuffle(deck);
-  console.log(deck);
-  return deck;
+  return shuffle(deck);
 }
 /**
  * Shuffles array in place. ES6 version
@@ -37,7 +35,22 @@ class App extends React.Component {
       deck: generateDeck(),
       pickedCards: [],
     }
-    
+  }
+    unFlipCards = (card1Index, card2Index) => {
+      let card1 = {...this.state.deck[card1Index]};
+      let card2 = {...this.state.deck[card2Index]};
+      card1.isFlipped = false;
+      card2.isFlipped = false;
+      let newDeck = this.state.deck.map((card, index) => {
+        if(card1Index === index){
+          return card1;
+        } else if(card2Index === index){
+          return card2;
+        } else {
+          return card;
+        }
+      })
+      this.setState({deck:newDeck});
   }
   pickCard = (cardIndex) => {
     if(this.state.deck[cardIndex].isFlipped === true) {
@@ -58,8 +71,8 @@ class App extends React.Component {
     let card1Index = newPickedCards[0];
     let card2Index = newPickedCards[1];
     if(newDeck[card1Index].symbol !== newDeck[card2Index].symbol) {
-      console.log (`${newDeck[card1Index].symbol} : ${newDeck[card2Index].symbol}`);
-      //cards don't match, unflip cards
+    setTimeout(() => {this.unFlipCards(card1Index, card2Index)}, 1000);
+    
     }
     newPickedCards = [];
   }
@@ -90,7 +103,7 @@ class App extends React.Component {
     </div>
   );
 }
-}
+  }
 
 
 export default App;
