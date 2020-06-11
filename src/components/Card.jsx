@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import './Card.css';
 
 class MemoryCard extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {isFlipped:false};
-    // }
-    // clickHandler() {
-    //     this.setState({
-    //         isFlipped: !this.state.isFlipped,
-    //     })
-       
-    //     }
     render() {
     let innerClass = 'MemoryCard_inner';
     if(this.props.isFlipped === true) {
