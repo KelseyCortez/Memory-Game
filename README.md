@@ -1,6 +1,8 @@
 # Memory Game
 [ Go to Site ](https://cocky-hypatia-afe919.netlify.app/)
 
+<img width="1237" alt="Screen Shot 2020-07-12 at 10 49 27 AM" src="https://user-images.githubusercontent.com/62561772/87249501-7b559480-c42d-11ea-96a9-e7eb3e3d46f3.png">
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
